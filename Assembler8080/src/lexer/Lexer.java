@@ -10,8 +10,8 @@ import java.nio.charset.StandardCharsets;
 public class Lexer {
 	private List<Token>   tokens;
 	private String        buffer;
-	private boolean 	  error;
-	private int 		  pos;
+	private boolean       error;
+	private int 	      pos;
 	private int 		  line;
 	
 	public Lexer(String path) throws IOException {
