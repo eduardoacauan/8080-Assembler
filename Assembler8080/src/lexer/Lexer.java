@@ -101,7 +101,7 @@ public class Lexer {
 		
 		if(error)
 			return false;
-		
+		insert(Token.makeToken(null, TokenType.TK_EOF, 0, line));
 		return true;
 	}
 	

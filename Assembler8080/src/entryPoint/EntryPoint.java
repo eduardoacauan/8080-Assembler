@@ -2,6 +2,7 @@ package entryPoint;
 import java.io.IOException;
 
 import lexer.*;
+import parser.*;
 
 public class EntryPoint {
 	public static void main(String[] args) {
@@ -18,6 +19,13 @@ public class EntryPoint {
 				return;
 			
 			lexer.lex();
+			
+			if(lexer.getError())
+				return;
+			
+			Parser parser = new Parser(lexer.getTokens());
+			
+			parser.build();
 			
 		}
 		catch(IOException e) {
