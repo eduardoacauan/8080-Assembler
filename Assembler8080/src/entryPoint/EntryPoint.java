@@ -5,6 +5,12 @@ import lexer.*;
 
 public class EntryPoint {
 	public static void main(String[] args) {
+		
+		if(args.length == 0) {
+			System.out.println("File expected!");
+			return;
+		}
+		
 		try {
 			Lexer lexer = new Lexer(args[0]);
 			

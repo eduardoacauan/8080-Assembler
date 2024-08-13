@@ -7,8 +7,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-
+/************************************************************
+ * This class is responsible for returning a list of tokens *
+ * after a complete lexical analysis in the file            *
+ * by Eduardo S. Acauan 									*
+ ***********************************************************/
 public class Lexer {
+	private final String  extension = "asm";
 	private List<Token>   tokens;
 	private String        buffer;
 	private boolean       error;
@@ -17,7 +22,8 @@ public class Lexer {
 	private HashMap<String, TokenType> keys;
 	
 	public Lexer(String path) throws IOException {
-		if(getExtension(path) == null) {
+		String ext = getExtension(path);
+		if(!ext.equals(extension)) {
 			System.out.println("Invalid extension!");
 			error = true;
 			return;
