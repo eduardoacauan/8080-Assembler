@@ -30,4 +30,10 @@ public class Token {
 	public int getValue() {
 		return value;
 	}
+	
+	public static Token makeToken(String lexeme, TokenType type, int value, int line) {
+		if(lexeme == null)
+			return new Token(type, value, line);
+		return new Token(lexeme, type, value, line);
+	}
 }

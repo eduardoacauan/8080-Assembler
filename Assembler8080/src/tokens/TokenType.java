@@ -12,5 +12,14 @@ public enum TokenType {
 	TK_D,
 	TK_E,
 	TK_H,
-	TK_L
+	TK_L,
+	TK_DIV,
+	TK_PLUS,
+	TK_MINUS,
+	TK_MUL,
+	TK_LP,
+	TK_RP,
+	TK_M,
+	TK_LABEL,
+	TK_MVI
 }

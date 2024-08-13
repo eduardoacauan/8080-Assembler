@@ -11,6 +11,8 @@ public class EntryPoint {
 			if(lexer.getError())
 				return;
 			
+			lexer.lex();
+			
 		}
 		catch(IOException e) {
 			System.out.println("Error opening file " + args[0]);
