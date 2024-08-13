@@ -12,7 +12,7 @@ public class Lexer {
 	private String        buffer;
 	private boolean       error;
 	private int 	      pos;
-	private int 		  line;
+	private int           line;
 	
 	public Lexer(String path) throws IOException {
 		if(getExtension(path) == null) {
