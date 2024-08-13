@@ -15,9 +15,6 @@ public class EntryPoint {
 		try {
 			Lexer lexer = new Lexer(args[0]);
 			
-			if(lexer.getError())
-				return;
-			
 			lexer.lex();
 			
 			if(lexer.getError())

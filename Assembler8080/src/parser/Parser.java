@@ -145,8 +145,8 @@ public class Parser {
 		
 		AST expr = expression();
 		
-		if(expr == null) {
-			error("Expression expected!");
+		if(expr == null || expr.type == AType.MNEMONIC) {
+			error("Invalid Left Hand Side !");
 			return null;
 		}
 		
@@ -159,8 +159,8 @@ public class Parser {
 		
 		AST expr2 = expression();
 		
-		if(expr2 == null) {
-			error("Expression expected!");
+		if(expr2 == null || expr2.type == AType.MNEMONIC) {
+			error("Invalid Right Hand Side !");
 			return null;
 		}
 		
@@ -172,6 +172,7 @@ public class Parser {
 		for(var c : args) {
 			System.out.print(c);
 		}
+		System.out.print("\n");
 		error = true;
 		return;
 	}
