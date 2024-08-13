@@ -12,6 +12,7 @@ public class CodeGen {
 	private List<Byte> program;
 	private int 	   pc;
 	private int 	   origin;
+	private boolean    error;
 	
 	public CodeGen(List<AST> trees) {
 		this.trees = trees;
