@@ -1564,16 +1564,16 @@ public class CodeGen {
 		
 		switch(r.getRG()) {
 			case TokenType.TK_B:
-				write8(0x06);
+				write8(0x01);
 				break;
 			case TokenType.TK_D:
-				write8(0x16);
+				write8(0x11);
 				break;
 			case TokenType.TK_H:
-				write8(0x26);
+				write8(0x21);
 				break;
 			case TokenType.TK_SP:
-				write8(0x36);
+				write8(0x31);
 				break;
 			default:
 				error("Invalid register! use b, d, h or sp!");
