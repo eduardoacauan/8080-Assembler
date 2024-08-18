@@ -1,8 +1,7 @@
 package entryPoint;
 import java.io.IOException;
 
-import lexer.*;
-import parser.*;
+import assembler.*;
 
 public class EntryPoint {
 	public static void main(String[] args) {
@@ -12,18 +11,10 @@ public class EntryPoint {
 			return;
 		}
 		
-		try {
-			Lexer lexer = new Lexer(args[0]);
+		try {		
+			Assembler asm = new Assembler(args[0]);
 			
-			lexer.lex();
-			
-			if(lexer.getError())
-				return;
-			
-			Parser parser = new Parser(lexer.getTokens());
-			
-			parser.build();
-			
+			asm.assembly();
 		}
 		catch(IOException e) {
 			System.out.println("Error opening file " + args[0]);

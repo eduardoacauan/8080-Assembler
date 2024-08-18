@@ -1,4 +1,4 @@
-package parser;
+package ast;
 import tokens.TokenType;
 
 public class Register extends AST {
@@ -12,5 +12,9 @@ public class Register extends AST {
 	
 	public TokenType getRG() {
 		return rg;
+	}
+	
+	public void setRG(TokenType type) {
+		rg = type;
 	}
 }

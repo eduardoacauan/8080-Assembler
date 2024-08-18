@@ -1,4 +1,4 @@
-package parser;
+package ast;
 
 public enum AType {
 	LITERAL,
@@ -6,5 +6,8 @@ public enum AType {
 	MNEMONIC,
 	BINARYEXPR,
 	REGISTER,
-	LABEL
+	LABEL,
+	BYTEDECLARATION,
+	WORDDECLARATION,
+	STRING
 }

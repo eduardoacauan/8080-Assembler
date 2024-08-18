@@ -1,4 +1,4 @@
-package parser;
+package ast;
 
 public class Literal extends AST {
 	private int value;

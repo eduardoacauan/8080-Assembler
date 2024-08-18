@@ -1,4 +1,4 @@
-package parser;
+package ast;
 
 public abstract class AST {
 	protected AType type;

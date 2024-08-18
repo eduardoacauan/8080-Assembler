@@ -1,4 +1,4 @@
-package parser;
+package ast;
 
 public class Label extends AST {
 	private String id;

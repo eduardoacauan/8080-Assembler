@@ -1,4 +1,4 @@
-package parser;
+package ast;
 import tokens.TokenType;
 
 public class BinaryExpr extends AST {

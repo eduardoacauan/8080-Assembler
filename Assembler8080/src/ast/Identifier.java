@@ -1,4 +1,4 @@
-package parser;
+package ast;
 
 public class Identifier extends AST {
 	private String id;
